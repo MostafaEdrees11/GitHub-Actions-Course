@@ -23,5 +23,5 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6.0.3
 
-      - name: Run tests
+      - name: Run npm tests
         run: npm run test
