@@ -1,0 +1,27 @@
+name: Push and Pull Request Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - "release/**"
+    paths:
+      - "src/**"
+      - "package.json/**"
+  pull_request:
+    branches:
+      - main
+      - "release/**"
+    paths:
+      - "src/**"
+      - "package.json/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6.0.3
+
+      - name: Run tests
+        run: npm run test
