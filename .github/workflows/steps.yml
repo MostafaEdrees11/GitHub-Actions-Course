@@ -12,7 +12,6 @@ jobs:
           echo "2nd line in step1"
           echo "3rd line in step3"
           cat test.txt
-        working-directory: ./temp
         shell: bash
         # pwsh, cmd, powershell, python
 
