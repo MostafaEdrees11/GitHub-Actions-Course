@@ -1,6 +1,6 @@
 name: Workflow to manipulate with steps in jobs
 
-on: 
+on:
   workflow_dispatch:
 
 jobs:
@@ -11,6 +11,7 @@ jobs:
           echo "1st line in step1"
           echo "2nd line in step1"
           echo "3rd line in step3"
+          cat test.txt
         working-directory: ./temp
         shell: bash
         # pwsh, cmd, powershell, python
