@@ -2,10 +2,19 @@ name: Manual Workflow
 
 on: 
   workflow_dispatch:
+    inputs:
+      environment:
+        description: "Choose environment"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - staging
+          - production
 
 jobs:
   deploy-app:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy the application
-        run: echo "Deploying the application..."
+        run: echo "Deploying the application to ${{inputs.environment}} environment"
