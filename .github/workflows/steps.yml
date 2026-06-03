@@ -1,0 +1,19 @@
+name: Workflow to manipulate with steps in jobs
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "1st line in step1"
+          echo "2nd line in step1"
+          echo "3rd line in step3"
+        working-directory: ./temp
+        shell: bash
+        # pwsh, cmd, powershell, python
+
+      - run: print %ENV
+        shell: perl {0}
