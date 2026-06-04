@@ -23,7 +23,7 @@ jobs:
   dockerized-job:
     runs-on: ubuntu-latest
     container:
-      image: Node:20
+      image: node:20
       # image: ghcr.io/my-org/my-private-image:latest
       # credentials:
         # username: ${{ secrets.DOCKER_USERNAME }}
