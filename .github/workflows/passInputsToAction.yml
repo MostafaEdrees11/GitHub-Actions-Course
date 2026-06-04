@@ -1,0 +1,15 @@
+name: pass inputs to actions
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  greet-person:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        uses: .github/actions/sayHello
+        with:
+          name: Mostafa
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
